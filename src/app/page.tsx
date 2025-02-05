@@ -1,8 +1,7 @@
-import { api, HydrateClient } from "@/trpc/server";
+import { HydrateClient } from "@/trpc/server";
 import Link from "next/link";
 
 export default async function Home() {
-  void api.post.getLatest.prefetch();
 
   return (
     <HydrateClient>
