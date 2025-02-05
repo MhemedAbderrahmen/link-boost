@@ -12,7 +12,6 @@ export default async function Home() {
           </h1>
         </div>
         <div>
-          {/* Link with large button style */}
           <Link
             href={"/generator"}
             className="rounded-md bg-blue-500 px-6 py-3 text-sm font-semibold text-white transition-colors duration-100 hover:bg-blue-600"
