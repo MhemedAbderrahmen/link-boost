@@ -8,6 +8,13 @@
       "when": 1738744022033,
       "tag": "0000_cold_mystique",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1738787329875,
+      "tag": "0001_gray_fenris",
+      "breakpoints": true
     }
   ]
 }

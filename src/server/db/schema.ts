@@ -34,3 +34,18 @@ export const posts = createTable(
     nameIndex: index("name_idx").on(example.name),
   })
 );
+
+export const links = createTable(
+  "link",
+  {
+    id: integer("id").primaryKey().generatedByDefaultAsIdentity(),
+    secretKey: varchar("secret_key", { length: 256 }),
+    name: varchar("name", { length: 256 }),
+    createdAt: timestamp("created_at", { withTimezone: true })
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updated_at", { withTimezone: true }).$onUpdate(
+      () => new Date()
+    ),
+  }
+)
