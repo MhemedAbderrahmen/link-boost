@@ -4,6 +4,7 @@ import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TRPCReactProvider } from "@/trpc/react";
+import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "LinkBoost",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <footer className="px-4 py-2 text-center text-sm text-muted-foreground">
             Personal website
           </footer>
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
