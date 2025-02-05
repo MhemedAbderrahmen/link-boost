@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { HydrateClient } from "@/trpc/server";
 import Link from "next/link";
 
-export default async function Generator() {
+export default function Generator() {
   return (
     <HydrateClient>
       <main className="flex min-h-screen w-screen flex-col">
