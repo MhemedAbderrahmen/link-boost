@@ -40,7 +40,7 @@ export const links = createTable(
   {
     id: integer("id").primaryKey().generatedByDefaultAsIdentity(),
     secretKey: varchar("secret_key", { length: 256 }),
-    name: varchar("name", { length: 256 }),
+    name: varchar("name", { length: 256 }).unique(),
     createdAt: timestamp("created_at", { withTimezone: true })
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),

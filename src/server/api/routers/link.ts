@@ -8,10 +8,13 @@ export const linkRouter = createTRPCRouter({
   create: publicProcedure
     .input(z.object({ name: z.string().min(1) }))
     .mutation(async ({ ctx, input }) => {
-      await ctx.db.insert(links).values({
+      const [link] = await ctx.db.insert(links).values({
         name: input.name,
         secretKey: randomBytes(32).toString("hex")
-      });
+      }).returning();
+      return {
+        secretKey: link?.secretKey
+      }
     }),
     
     getAvailability: publicProcedure.input(z.object({ name: z.string().min(1) })).mutation(async ({ ctx, input }) => {

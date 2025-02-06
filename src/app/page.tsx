@@ -1,6 +1,5 @@
 import { ClaimLink } from "@/components/claim-link";
 import { HydrateClient } from "@/trpc/server";
-import Link from "next/link";
 
 export default async function Home() {
   return (
@@ -11,7 +10,7 @@ export default async function Home() {
             Link <span className="text-blue-500">Boost</span>
           </h1>
           <div className="text-justify text-lg">
-            Link Boost is a simple tool to create short links.
+            Link Boost is a simple tool to create custom profile pages.
             <br />
             Type in the link you want to claim and claim it now!
           </div>

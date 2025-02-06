@@ -1,0 +1,1 @@
+ALTER TABLE "link-boost_link" ADD CONSTRAINT "link-boost_link_name_unique" UNIQUE("name");

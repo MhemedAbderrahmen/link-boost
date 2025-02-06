@@ -1,5 +1,6 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import { Button } from "@/components/ui/button";
+import { ValidateClaim } from "@/components/validate-claim";
 import { HydrateClient } from "@/trpc/server";
 import Link from "next/link";
 
@@ -20,7 +21,9 @@ export default function Generator() {
             </div>
           </div>
           {/* Content */}
-          <div></div>
+          <div className="flex h-full min-h-screen flex-col items-center justify-center">
+            <ValidateClaim />
+          </div>
         </div>
       </main>
     </HydrateClient>
